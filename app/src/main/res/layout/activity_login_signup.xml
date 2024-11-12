@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".LoginSignup">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/arrow_left"
+        android:id="@+id/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello,\nWhat are you signing in as?"
+        android:textColor="@color/blue"
+        android:layout_below="@+id/back"
+        android:textStyle="bold"
+        android:id="@+id/txt1"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How would you like to proceed? Join us\nas a registered user or continue as a guest to start\nexploring and ordering your favs!"
+        android:textColor="@color/grey"
+        android:layout_below="@+id/txt1"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="12dp"/>
+
+</RelativeLayout>
