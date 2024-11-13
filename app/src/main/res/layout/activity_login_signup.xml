@@ -12,7 +12,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/arrow_left"
-        android:id="@+id/back"/>
+        android:id="@+id/back"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +24,8 @@
         android:textStyle="bold"
         android:id="@+id/txt1"
         android:fontFamily="@font/poppinsmedium"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,8 +33,95 @@
         android:text="How would you like to proceed? Join us\nas a registered user or continue as a guest to start\nexploring and ordering your favs!"
         android:textColor="@color/grey"
         android:layout_below="@+id/txt1"
+        android:id="@+id/txt2"
         android:textStyle="bold"
         android:fontFamily="@font/poppinsmedium"
         android:textSize="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt2"
+        android:layout_above="@+id/policy"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img1"
+            android:layout_above="@+id/buttons"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/buttons"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_above="@+id/txt_already">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:onClick="createAccount"
+                android:textColor="@color/black"
+                android:background="@drawable/button_light_blue"
+                android:fontFamily="@font/dmsansbold"/>
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Login as Guest"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/dmsansbold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/txt_already"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsansregular"
+                android:textSize="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In Here"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/dmsansregular"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy."
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:id="@+id/policy"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/grey"/>
 
 </RelativeLayout>
