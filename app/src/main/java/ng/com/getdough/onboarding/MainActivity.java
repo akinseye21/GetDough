@@ -1,24 +1,21 @@
-package ng.com.getdough;
+package ng.com.getdough.onboarding;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
+import ng.com.getdough.R;
 import ng.com.getdough.adapter.SliderAdapter;
+import ng.com.getdough.registration.LoginSignup;
 
 public class MainActivity extends AppCompatActivity {
 

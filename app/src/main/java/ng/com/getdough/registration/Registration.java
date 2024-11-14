@@ -1,9 +1,7 @@
-package ng.com.getdough;
+package ng.com.getdough.registration;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,14 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import ng.com.getdough.R;
+import ng.com.getdough.forgotpassword.ForgotPassword;
 
 public class Registration extends AppCompatActivity {
     ImageView topIcon, back;
@@ -30,8 +28,10 @@ public class Registration extends AppCompatActivity {
     LinearLayout layoutCreateAccount, layoutLogin;
 
     EditText edt_fullname, edt_email1, edt_password1, edt_phone, edt_address;
-    Button btn_continue, btn_signin_google;
+    Button btn_continue;
+    RelativeLayout btn_signin_google;
     Boolean reg_name = false, reg_email = false, reg_pass = false, reg_phone = false, reg_address = false;
+    Boolean login_email = false, login_pass = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,17 +193,35 @@ public class Registration extends AppCompatActivity {
     private void check() {
         if (reg_name && reg_email && reg_pass && reg_phone && reg_address){
             btn_continue.setBackground(ContextCompat.getDrawable(Registration.this, R.drawable.button_blue));
+            btn_continue.setTextColor(ContextCompat.getColor(this, R.color.white));
             btn_continue.setClickable(true);
             btn_continue.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    startActivity(new Intent(Registration.this, VerifyEmail.class));
+                    startActivity(new Intent(Registration.this, VerifyEmail.class).putExtra("email", edt_email1.getText().toString().trim()));
                 }
             });
 
         }else{
             btn_continue.setBackground(ContextCompat.getDrawable(Registration.this, R.drawable.button_grey));
             btn_continue.setClickable(false);
+        }
+    }
+    private void check2(Button login, RelativeLayout login_google) {
+        if (login_email && login_pass){
+            login.setBackground(ContextCompat.getDrawable(Registration.this, R.drawable.button_blue));
+            login.setTextColor(ContextCompat.getColor(this, R.color.white));
+            login.setClickable(true);
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //show dialog for login
+                }
+            });
+
+        }else{
+            login.setBackground(ContextCompat.getDrawable(Registration.this, R.drawable.button_grey));
+            login.setClickable(false);
         }
     }
 
@@ -228,5 +246,66 @@ public class Registration extends AppCompatActivity {
         txtLogin.setTextColor(ContextCompat.getColor(this, R.color.blue));
         layoutCreateAccount.setVisibility(View.GONE);
         layoutLogin.setVisibility(View.VISIBLE);
+
+
+        EditText edt_email2 = findViewById(R.id.login_email);
+        EditText edt_password2 = findViewById(R.id.login_password);
+        TextView txt_forgot = findViewById(R.id.forgot_password);
+        txt_forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Registration.this, ForgotPassword.class));
+            }
+        });
+        Button btn_login = findViewById(R.id.btn_login);
+        RelativeLayout btn_login_google = findViewById(R.id.btn_login_google);
+
+        edt_email2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (Patterns.EMAIL_ADDRESS.matcher(edt_email2.getText().toString().trim()).matches()){
+                    login_email = true;
+                }else{
+                    login_email = false;
+                    edt_email2.setError("Invalid email type");
+                }
+                check2(btn_login, btn_login_google);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        edt_password2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (edt_password2.getText().toString().length()>5){
+                    login_pass = true;
+                }else{
+                    login_pass = false;
+                    edt_password2.setError("Password must be more than 6 characters");
+                }
+                check2(btn_login, btn_login_google);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
+
     }
 }
