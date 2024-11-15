@@ -1,5 +1,6 @@
 package ng.com.getdough.forgotpassword;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.text.Editable;
@@ -62,6 +63,8 @@ public class ForgotPassword extends AppCompatActivity {
             public void onClick(View view) {
                 if (fg_email){
                     //send a recovery email
+                    Intent intent = new Intent(ForgotPassword.this, VerifyIdentity.class);
+                    startActivity(intent);
                 }
             }
         });

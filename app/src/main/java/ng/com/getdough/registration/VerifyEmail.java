@@ -4,18 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import ng.com.getdough.R;
+import ng.com.getdough.guestscreen.EnterAddress;
 
 public class VerifyEmail extends AppCompatActivity {
 
     ImageView back;
     String email;
     TextView txt_email;
+    Button btn_check_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,13 @@ public class VerifyEmail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        btn_check_email = findViewById(R.id.btn_check_email);
+        btn_check_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(VerifyEmail.this, EnterAddress.class));
             }
         });
 
