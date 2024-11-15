@@ -1,15 +1,11 @@
-package ng.com.getdough.guestscreen;
+package ng.com.getdough;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -20,7 +16,6 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import ng.com.getdough.R;
 import ng.com.getdough.fragments.HomeFragment;
 import ng.com.getdough.fragments.OrdersFragment;
 import ng.com.getdough.fragments.ProfileFragment;

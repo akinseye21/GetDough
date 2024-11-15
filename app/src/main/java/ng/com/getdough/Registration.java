@@ -1,4 +1,4 @@
-package ng.com.getdough.registration;
+package ng.com.getdough;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -17,9 +17,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import ng.com.getdough.R;
-import ng.com.getdough.forgotpassword.ForgotPassword;
 
 public class Registration extends AppCompatActivity {
     ImageView topIcon, back;

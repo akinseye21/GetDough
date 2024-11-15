@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:layout_gravity="center"
-    tools:context=".guestscreen.EnterAddress">
+    tools:context=".EnterAddress">
 
     <ScrollView
         android:layout_width="match_parent"

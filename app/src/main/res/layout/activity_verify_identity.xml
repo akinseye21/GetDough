@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:layout_gravity="center"
-    tools:context=".forgotpassword.VerifyIdentity">
+    tools:context=".VerifyIdentity">
 
     <ImageView
         android:layout_width="20dp"

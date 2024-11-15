@@ -1,4 +1,4 @@
-package ng.com.getdough.registration;
+package ng.com.getdough;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import ng.com.getdough.R;
-import ng.com.getdough.guestscreen.EnterAddress;
 
 public class VerifyEmail extends AppCompatActivity {
 

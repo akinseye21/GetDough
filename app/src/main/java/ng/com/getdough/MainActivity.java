@@ -1,4 +1,4 @@
-package ng.com.getdough.onboarding;
+package ng.com.getdough;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import ng.com.getdough.R;
 import ng.com.getdough.adapter.SliderAdapter;
-import ng.com.getdough.registration.LoginSignup;
 
 public class MainActivity extends AppCompatActivity {
 

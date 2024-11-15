@@ -1,4 +1,4 @@
-package ng.com.getdough.forgotpassword;
+package ng.com.getdough;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -14,8 +14,6 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import ng.com.getdough.R;
 
 public class ForgotPassword extends AppCompatActivity {
 

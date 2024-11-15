@@ -1,33 +1,36 @@
-package ng.com.getdough.forgotpassword;
+package ng.com.getdough;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ng.com.getdough.R;
+public class LoginSignup extends AppCompatActivity {
 
-public class VerifyIdentity extends AppCompatActivity {
-
-    Button btn_next;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_verify_identity);
+        setContentView(R.layout.activity_login_signup);
 
-        btn_next = findViewById(R.id.btn_next);
-        btn_next.setOnClickListener(new View.OnClickListener() {
+        back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VerifyIdentity.this, ResetPassword.class);
-                startActivity(intent);
+                finish();
             }
         });
+
+    }
+
+    public void createAccount(View view) {
+        startActivity(new Intent(LoginSignup.this, Registration.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

@@ -1,38 +1,30 @@
-package ng.com.getdough.registration;
+package ng.com.getdough;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ng.com.getdough.R;
+public class EnterAddress extends AppCompatActivity {
 
-public class LoginSignup extends AppCompatActivity {
-
-    ImageView back;
+    Button btn_continue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login_signup);
+        setContentView(R.layout.activity_enter_address);
 
-        back = findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
+        btn_continue = findViewById(R.id.btn_continue);
+        btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                startActivity(new Intent(EnterAddress.this, Dashboard.class));
             }
         });
-
-    }
-
-    public void createAccount(View view) {
-        startActivity(new Intent(LoginSignup.this, Registration.class));
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }
