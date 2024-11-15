@@ -22,22 +22,13 @@
             android:name=".forgotpassword.ResetPassword"
             android:exported="false" />
         <activity
-            android:name=".forgotpassword.VerifyIdentity"
+            android:name=".Registration"
             android:exported="false" />
         <activity
-            android:name=".forgotpassword.ForgotPassword"
+            android:name=".LoginSignup"
             android:exported="false" />
         <activity
-            android:name=".registration.VerifyEmail"
-            android:exported="false" />
-        <activity
-            android:name=".registration.Registration"
-            android:exported="false" />
-        <activity
-            android:name=".registration.LoginSignup"
-            android:exported="false" />
-        <activity
-            android:name=".onboarding.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

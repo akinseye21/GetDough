@@ -79,7 +79,7 @@
             android:textColor="@color/white"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:id="@+id/btn_check_email"
+            android:id="@+id/btn_continue"
             android:background="@drawable/button_blue"
             android:fontFamily="@font/dmsansbold"/>
         <Space

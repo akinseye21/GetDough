@@ -38,7 +38,7 @@ public class VerifyEmail extends AppCompatActivity {
                 finish();
             }
         });
-        btn_check_email = findViewById(R.id.btn_check_email);
+        btn_check_email = findViewById(R.id.btn_continue);
         btn_check_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#DFE1E5"
     tools:context=".fragments.HomeFragment">
 
@@ -385,6 +386,88 @@
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Dough Menu"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="#1A2023"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pizza"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="#1A2023"
+                            android:paddingRight="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Burger"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/dmsansregular"
+                            android:textColor="#C2CECD"
+                            android:paddingRight="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pasta"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/dmsansregular"
+                            android:textColor="#C2CECD"
+                            android:paddingRight="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Appetizer"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/dmsansregular"
+                            android:textColor="#C2CECD"
+                            android:paddingRight="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chicken"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/dmsansregular"
+                            android:textColor="#C2CECD"
+                            android:paddingRight="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Noodles"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/dmsansregular"
+                            android:textColor="#C2CECD"
+                            android:paddingRight="25dp"/>
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gridview"
+                    android:numColumns="2"/>
             </LinearLayout>
 
         </LinearLayout>
