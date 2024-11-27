@@ -259,17 +259,6 @@
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/dmsansbold"/>
-
-<!--                            <Button-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="60dp"-->
-<!--                                android:text="Sign up with Google"-->
-<!--                                android:textAllCaps="false"-->
-<!--                                android:id="@+id/signin_google"-->
-<!--                                android:textColor="@color/black"-->
-<!--                                android:layout_marginBottom="10dp"-->
-<!--                                android:background="@drawable/button_grey"-->
-<!--                                android:fontFamily="@font/dmsansbold"/>-->
                         </RelativeLayout>
 
 
@@ -380,29 +369,7 @@
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/dmsansbold"/>
 
-                            <!--                            <Button-->
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="60dp"-->
-                            <!--                                android:text="Sign up with Google"-->
-                            <!--                                android:textAllCaps="false"-->
-                            <!--                                android:id="@+id/signin_google"-->
-                            <!--                                android:textColor="@color/black"-->
-                            <!--                                android:layout_marginBottom="10dp"-->
-                            <!--                                android:background="@drawable/button_grey"-->
-                            <!--                                android:fontFamily="@font/dmsansbold"/>-->
                         </RelativeLayout>
-<!--                        <Button-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:text="Login with Google"-->
-<!--                            android:textAllCaps="false"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:id="@+id/btn_login_google"-->
-<!--                            android:layout_marginLeft="30dp"-->
-<!--                            android:layout_marginRight="30dp"-->
-<!--                            android:layout_marginBottom="10dp"-->
-<!--                            android:background="@drawable/button_grey"-->
-<!--                            android:fontFamily="@font/dmsansbold"/>-->
 
 
 
